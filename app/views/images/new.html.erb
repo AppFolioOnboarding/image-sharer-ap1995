@@ -1,0 +1,12 @@
+<%= form_with scope: :images, url: images_path, local: true do |form| %>
+    <p>
+      <%= form.label "Enter Image link" %><br>
+      <%= form.text_field :link %>
+    </p>
+
+    <p>
+      <%= form.submit 'Submit', class:'buttons'%>
+    </p>
+<% end %>
+
+
