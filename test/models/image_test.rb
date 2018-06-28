@@ -14,7 +14,7 @@ class ImageTest < ActiveSupport::TestCase
     image = Image.new(link: 'djusdhclkds')
 
     refute_predicate image, :valid?
-    assert_equal 'is invalid', image.errors.messages[:link].first
+    assert_equal 'is not a valid URL', image.errors.messages[:link].first
   end
 
   def test_invalid_if_url_is_blank
