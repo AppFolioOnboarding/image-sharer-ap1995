@@ -1,9 +1,6 @@
 require 'test_helper'
 
 class ImageTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
   def test_url_valid
     image = Image.new(link: 'https://i.ytimg.com/vi/SfLV8hD7zX4/maxresdefault.jpg')
 
