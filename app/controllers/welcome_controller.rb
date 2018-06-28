@@ -1,3 +1,9 @@
 class WelcomeController < ApplicationController
-  def index; end
+  def show
+    @image = Image.find(params[:id])
+  end
+
+  def index
+    @images = Image.order('created_at DESC')
+  end
 end
