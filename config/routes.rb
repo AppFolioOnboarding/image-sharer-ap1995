@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  get 'welcome/index'
-
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root 'welcome#index'
-  resources :images, only: %i[new create show]
+  root 'images#index'
+  resources :images, only: %i[index new create show]
 end

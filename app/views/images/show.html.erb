@@ -1,5 +1,5 @@
 <h1>Your image</h1>
 
-<%= image_tag(@image.link, width: 400) %>
+<%= image_tag(@image.link, max_width: 400) %>
 <%= link_to 'Add another image', new_image_url %>
-<%= link_to 'Home', welcome_index_path %>
+<%= link_to 'Home', images_path%>
