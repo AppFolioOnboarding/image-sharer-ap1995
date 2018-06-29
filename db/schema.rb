@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 20180626235055) do
 
   create_table "images", force: :cascade do |t|
-    t.string "link"
+    t.string "link", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

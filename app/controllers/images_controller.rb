@@ -1,6 +1,11 @@
 class ImagesController < ApplicationController
   def new; end
 
+  def index
+    @images = Image.order('created_at DESC')
+    flash[:danger] = 'Empty Database' if @images.empty?
+  end
+
   def create
     @image = Image.new(image_params)
     if @image.save
